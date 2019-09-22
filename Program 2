@@ -1,0 +1,122 @@
+import java.util.Scanner;
+public class homework {
+	/* Project Name : Program 2 
+	 * Author: Dioh Desuah
+	 * Last Modified: Sept 19, 2019
+	 *  Version: 2.0
+	 *  I have  created a working calculator in eclipse. It compares the answer between the first two numbers to the third
+	*/
+	public static void main(String[] args) {
+		// These are the three variables that I have instantiated 
+		int first = 0;
+		int second = 0;
+		int third = 0;
+		int onswitch=1; // this variable determines whether the program is on.
+		System.out.println("Welcome to Dioh's Calculator. You will calculate your first two numbers and will compare the answer to your third number. \nType in 3 numbers. After each number press enter.");
+		while(onswitch==1) {
+		Scanner keyboard = new Scanner(System.in); 
+		for (int i =1; i<=3;i++) {
+			if (first==0) {
+				first = keyboard.nextInt();
+			}
+			if (second==0) {
+				second = keyboard.nextInt();
+			}
+			if (third==0) {
+				third = keyboard.nextInt();
+			}
+			
+		}
+		System.out.println("Your first number is " +first +".\nYour second number is "+ second+".\nYour third number is "+ third+".");
+		System.out.println("\nThe 1st and 2nd number will be used by the mathmatical symbol. Choose what you want to do");
+		System.out.println("1. Addition \n2. Subtraction \n3. Multiplication \n4. Division");
+		System.out.println("ALERT: For Subtraction and Division, it is always first number then second number!\nTYPE IN 1-4");
+	
+		 int choice = keyboard.nextInt();
+		double ans;
+		switch (choice) {
+		case 1: //this is the addition formula 
+			 ans = first + second;
+			System.out.println(first +" + "+ second +" = "+ (int)ans);
+			if (ans>third) {
+				System.out.println((int)ans + " is greater than "+ third);
+			}
+			else if (ans<third){
+				System.out.println((int)ans + " is less than "+ third);
+			}
+			else {
+				System.out.println((int)ans + " is equal to "+ third);
+				
+			}
+			break;
+		
+		case 2: // this is the subtraction formula
+			ans = first - second;
+			System.out.println(first +" - "+ second +" = "+ (int)ans);
+			if (ans>third) {
+				System.out.println((int)ans + " is greater than "+ third);
+			}
+			else if (ans<third){
+				System.out.println((int)ans + " is less than "+ third);
+			}
+			else {
+				System.out.println((int)ans + " is equal to "+ third);
+						}
+			break;
+		
+		case 3: //this is the multiplication formula
+			ans = first * second;
+			System.out.println(first +" * "+ second +" = "+ (int)ans);
+			if (ans>third) {
+				System.out.println((int)ans + " is greater than "+ third);
+			}
+			else if (ans<third){
+				System.out.println((int)ans + " is less than "+ third);
+			}
+			else {
+				System.out.println((int)ans + " is equal to "+ third);
+			}
+		break;
+		
+		case 4:// this is the division formula
+			ans = (double)first / second;
+			System.out.println(first +" / "+ second +" = "+ ans);
+			if (ans>third) {
+				System.out.println(ans + " is greater than "+ third);
+			}
+			else if (ans<third){
+				System.out.println(ans + " is less than "+ third);
+			}
+			else {
+				System.out.println(ans + " is equal to "+ third);
+			}
+			break;
+		}
+		
+		
+		System.out.println("DO YOU WISH TO CONTINUE? Y or N?\nAnswer in All Caps");
+		
+	String pick;
+		pick = keyboard.next();
+	
+		
+		if(pick.equals("N")) { // if the user wants to stop, this shuts off code.
+			onswitch =0;
+			System.out.println("Thank You and Goodbye!");
+			
+		}
+		first=0;
+		second=0;
+		third=0;
+	
+	
+	keyboard.close();
+	}
+		
+		}
+		
+	}
+		
+		
+
+		
